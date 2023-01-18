@@ -37,6 +37,7 @@ header h1 {
 .product-data {
   width: 90%;
   margin: auto;
+  color: black;
 }
 
 .product-data-price {
