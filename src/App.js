@@ -5,7 +5,7 @@ import ProductDetail from './containers/ProductDetail';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Header />
       <Routes>
         <Route path="/" element={<ProductListing />} />

@@ -7,23 +7,23 @@ const ProductComponent = () => {
       id, title, image, price, category,
     } = product;
     return (
-      <div key={id}>
-        <div>
+      <div className="product" key={id}>
+        <div className="product-image">
           <img src={image} alt={title} />
         </div>
-        <div>
-          <div>{title}</div>
-          <div>{price}</div>
-          <div>{category}</div>
+        <div className="product-data">
+          <h4>{title}</h4>
+          <h3 className="product-data-price">{`$ ${price}`}</h3>
+          <p className="product-data-category">{category}</p>
         </div>
       </div>
     );
   });
 
   return (
-    <>
+    <div className="product-list">
       {renderList}
-    </>
+    </div>
   );
 };
 
