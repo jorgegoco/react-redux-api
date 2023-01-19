@@ -9,17 +9,17 @@ const ProductDetail = () => {
   const {
     image, title, price, category, description,
   } = product;
-  const { id } = useParams();
+  const { productId } = useParams();
   const dispatch = useDispatch();
 
-  const fetchProductDetail = async () => {
+  const fetchProductDetail = async (id) => {
     const res = await axios.get(`https://fakestoreapi.com/products/${id}`);
     dispatch(selectedProduct(res.data));
   };
 
   useEffect(() => {
-    if (id && id !== '') fetchProductDetail(id);
-  }, [id]);
+    if (productId && productId !== '') fetchProductDetail(productId);
+  }, [productId]);
 
   return (
     <>
