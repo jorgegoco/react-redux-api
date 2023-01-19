@@ -26,13 +26,15 @@ const ProductDetail = () => {
       {Object.keys(product).length === 0 ? (
         <div>...Loading</div>
       ) : (
-        <div>
-          <img src={image} alt="" />
-          <h1>{title}</h1>
-          <h2>{price}</h2>
-          <h3>{category}</h3>
-          <p>{description}</p>
-          <p>Add to Cart</p>
+        <div className="detail">
+          <img src={image} alt={price} />
+          <div className="detail-data">
+            <h1>{title}</h1>
+            <h2>{`$ ${price}`}</h2>
+            <h3>{category}</h3>
+            <p>{description}</p>
+            <h2>Add to Cart</h2>
+          </div>
         </div>
       )}
     </>
